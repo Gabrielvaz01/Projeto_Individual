@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+
+    <link rel="stylesheet" href="../CSS/api.css">
+
+</head>
+
+<body>
+    <div class="alldiv">
+        <div class="homeDash">
+
+            <div class="tituloHome">
+                <h1>BielFit</h1>
+            </div>
+
+            <div class="boxBotoes">
+                <div class="botoes">
+                    <button>
+                        Simulador
+                    </button>
+                </div>
+
+                <div class="botoes">
+                    <button>
+                        Curiosidade
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="dashboards">
+            <div class="tituloDash">
+
+                <h1>
+                    Grupos Musculares que as essoas mais gostam de treinar
+                </h1>
+
+            </div>
+
+            <div class="dash">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="votacao">
+                <div>
+                    Peito</br>
+                    <input type="checkbox" name="" id=""></br>
+                </div>
+                <div>
+                    Ombro</br>
+                    <input type="checkbox" name="" id=""></br>
+                </div>
+                <div>
+                    Tricipes</br>
+                    <input type="checkbox" name="" id=""></br>
+                </div>
+                <div>
+                    Costas</br>
+                    <input type="checkbox" name="" id=""></br>
+                </div>
+                <div>
+                    Bicipes</br>
+                    <input type="checkbox" name="" id=""></br>
+                </div>
+                <div>
+                    Perna </br>
+                    <input type="checkbox" name="" id=""></br>
+                </div>
+            </div>
+
+            <div class="botaoRegistrar">
+                <button>
+                    Registrar
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Peito', 'Ombro', 'Tricipes', 'Costas', 'Bicipes', 'Perna'],
+            datasets: [{
+                label: 'Perna',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

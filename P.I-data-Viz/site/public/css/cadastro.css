@@ -1,0 +1,47 @@
+body{
+    margin: 0%;
+}
+
+.bannerCadastro{
+    display: flex;
+
+    background-image: url("../Img/banner\ cadastro.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: start;
+    align-items: center;
+
+    height: 750px;
+    width: 100%;
+}
+
+.conteudo #cadastro{
+    text-decoration: underline ;
+    text-decoration-thickness: 2px;
+    color: black;
+    
+    
+}
+
+.boxCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+
+    background-color: white;
+    border-radius: 5px;
+    height: 80%;
+    width: 36%;
+}
+
+.boxCadastro .tituloCadastro{
+    color: red;
+
+}
+
+.boxCadastro .conteudoCadastro{
+}
+

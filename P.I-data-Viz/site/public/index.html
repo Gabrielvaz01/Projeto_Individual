@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="./css/home.css">
+
+</head>
+
+<body class="body">
+
+    <nav class="navBar">
+        <div class="container">
+            <div class="icon">
+               <a href="Home.html">BIELFIT</a>             
+            </div>
+
+            <div class="conteudo">
+                <div class="icon2">
+                    <span> <a href="Login.html"> Login </a> </span>
+                </div>
+                <div class="icon2">
+                    <a href="">|</a>
+                </div>
+                <div class="icon2">
+                    <span> <a href="Cadastro.html"> Cadastrar</a> </span>
+                </div>
+                <!-- <div class="iconMenu">
+                    <img src="../Img/icon_menu.png" alt="">
+                </div> -->
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="bannerHome">
+
+        <div class="mensagemBanner">
+            <span>
+                Mudar nãe é facíl mas quando você nota os resultados nada te faz parar
+            </span>
+        </div>
+
+    </div>
+
+    <div class="tresPilares">
+        <div class="pilaresTituloAcad">
+            <h1>3 PIALRES DA ACADEMIA</h1>
+        </div>
+    </div>
+
+    <div class="boxTresPilares">
+
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar1">
+
+                </div>
+                <span> OBJETIVO</span>
+            </div>
+
+        </div>
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar2">
+
+                </div>
+                <span> CONSTANCIA</span>
+
+            </div>
+        </div>
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar3">
+
+                </div>
+                <span> DESCANSO</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tresPilares">
+        <div class="pilaresTitulo">
+            <h1>Curiosidade</h1>
+        </div>
+    </div>
+
+    <div class="curiosidadeInput">
+        <div class="input">
+             <input type="text" placeholder="Insira seu peso" id="input_peso"> 
+             <input type="text" placeholder="Insira sua altura" id="input_altura">
+        </div>
+    </div>
+
+    <div class="curiosidadeBotao">
+        <div class="botao">
+            <button onclick="calcular()">
+                Clique aqui para calcular
+            </button>
+        </div>
+    </div>
+
+
+    <div class="boxCuriosidade">
+        <div class="conteudoPilar">
+            <div class="iconPilar">
+
+            </div>
+            <span> IMC</span>
+            <div id="div_IMC"></div>
+        </div>
+    </div>
+
+    <div class="boxTresPilares">
+
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar">
+
+                </div>
+                <span> ÁGUA</span>
+                <div id="div_agua"></div>
+            </div>
+
+        </div>
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar">
+
+                </div>
+                <span> CREATINA</span>
+
+                <div id="div_creatina"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="boxBio">
+        <div class="container">
+            <div class="bio">
+                <h1 id="titulo">CBUM</h1>
+                <span id="span1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab suscipit repudiandae modi. Doloremque
+                    laborum sed ducimus ullam voluptatum dolor obcaecati iste hic harum dolorem recusandae quia, dicta
+                    repudiandae dolorum nulla.
+                </span>
+            </div>
+            <div class="img1">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="boxBio">
+        <div class="container">
+            <div class="img2">
+
+            </div>
+            <div class="bio">
+                <h1 id="titulo">Dino</h1>
+
+                <span id="span2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab suscipit repudiandae modi. Doloremque
+                    laborum sed ducimus ullam voluptatum dolor obcaecati iste hic harum dolorem recusandae quia, dicta
+                    repudiandae dolorum nulla.
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="boxCouple">
+
+        <div class="caixaCouple">
+
+            <div class="couple">
+                
+            </div>
+            
+            <div class="fraseCouple">
+                <span>CBUM vs Ramon Dino MR.Olympia 2022</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="rodaPe">
+        <span>© Copyright - Programador Gabriel Vaz SPT</span>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var peso = Number( input_peso.value);   
+        var altura = Number(input_altura.value);   
+
+        var IMC = peso / ((altura/100) * (altura/100))
+        var qtdAgua = peso * 35 
+        var creatina = peso * (7/100)
+
+        div_IMC.innerHTML= `${IMC.toFixed(2)}`
+
+        div_agua.innerHTML = `${qtdAgua /1000} Litros por dia`
+
+        div_creatina.innerHTML = `${creatina.toFixed(1)}`
+    }
+</script>

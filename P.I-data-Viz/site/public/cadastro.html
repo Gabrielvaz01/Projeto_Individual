@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/funcoes.js"></script>
+    <title>BielFit - Cadastro</title>
+
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+
+</head>
+<body>
+    <nav class="navBar">
+        <div class="container">
+        <div class="icon">
+            <a href="Home.html"> BIELFIT</a>
+        </div>
+
+        <div class="conteudo">
+            <div class="icon2">
+                <span> <a href="Login.html"> Login </a> </span>
+            </div>
+            <div class="icon2">
+                <a href="">|</a>
+            </div>
+            <div class="icon2">
+                <span id="cadastro"> <a href="Cadastro.html" > Cadastrar</a> </span>
+            </div>
+            <!-- <div class="iconMenu">
+                    <img src="../Img/icon_menu.png" alt="">
+                </div> -->
+        </div>
+    </div>
+    </nav>
+    <div class="bannerCadastro">
+
+        <div class="boxCadastro">
+            
+            <div class="tituloCadastro">
+            <span id="titulo">Entre para a GYMLIFE</span>
+            </div>
+
+            <!-- <div class="conteudoCadastro"> -->
+
+                <div class="inputCadastro" >
+                    <span>Inserira seu nome</span> <br>
+                    <input type="text" placeholder="Gabriel Vaz" id="input_nome" >
+                </div>
+                <div class="inputCadastro" >
+                    <span>Inserira seu email</span><br>
+                    
+                    <input type="text" placeholder="gabriel.vaz@sptech.school" id="input_email">
+                </div>
+            
+                <div class="inputCadastro" >
+                    <span>Inserira sua senha</span><br>
+                    
+                    <input type="password" placeholder="*******" id="input_senha">
+                </div>
+
+                <div class="inputCadastro" >
+                    <span>Confirme sua senha</span> <br>
+                    
+                    <input type="password" placeholder="*******" id="input_confirmarSenha">
+                </div>
+
+                <button onclick="cadastrar()">Cadastrar</button>
+
+        </div>
+
+    </div>
+
+    <div id="div_erros_login">
+        <div id="alert_erro">
+            <div id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+    </div>
+    <div id="div_aguardar"></div>
+
+
+    <div class="rodaPe">
+        <span>Copyright - Programador Gabriel Vaz SPT</span>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+       
+        var nome = input_nome.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+        var confirmeSenha = input_confirmarSenha.value;
+
+    if (nome == ""|| email ==  "" || senha == "" || confirmeSenha == "" ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Os campos precisam ser preenchidos";
+            finalizarAguardar()            
+
+        } else {
+            setInterval(sumirMensagem, 5000);
+        }
+
+            fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+
+                nomeServer: nome,
+                emailServer: email,
+                senhaServer: senha,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+                alert ("Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+             
+            } else {
+                alert ("Houve um erro ao tentar realizar o cadastro!")
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+   
+
+   
+</script>
