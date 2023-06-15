@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BielFit - Login</title>
+
+    <script src="js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+</head>
+<body>
+    <nav class="navBar">
+        <div class="container">
+        <div class="icon">
+           <a href="index.html" > BIELFIT </a>
+        </div>
+
+        <div class="conteudo">
+            <div class="icon2">
+                <span id="login"> <a href="Login.html"> Login </a> </span>
+            </div>
+            <div class="icon2">
+                <a href="">|</a>
+            </div>
+            <div class="icon2">
+                <span> <a href="Cadastro.html"> Cadastrar</a> </span>
+            </div>
+
+        </div>
+    </div>
+    </nav>
+    <div class="bannerLogin">
+
+        <div class="boxLogin">
+            
+            <div class="tituloLogin">
+            <span id="titulo">Entre para a GYMLIFE</span>
+            </div>
+
+                <div class="boxFormulario">
+                    <div class="inputCadastro" >
+                        <span>Inserira seu email</span><br>
+                    
+                        <input type="text" placeholder="gabriel.vaz@sptech.school" id="input_email">
+                    </div>
+              
+                    <div class="inputCadastro" >
+                        <span>Inserira sua senha</span><br>
+                    
+                        <input type="password" placeholder="*******" id="input_senha">
+                    </div>
+                </div>
+
+                <div class="botaoLogin">
+                    <button class="botao" onclick="entrar()">Logar</button>
+                </div>
+        </div>
+
+    </div>
+
+    <div class="rodaPe">
+        <span>Copyright - Programador Gabriel Vaz SPT</span>
+    </div>
+
+</body>
+</html>
+<a href="index.html"></a>
+<script>
+
+
+    function entrar() {
+
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        alert(`
+                        login realizado!!
+                        `);
+                        window.location = "home.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

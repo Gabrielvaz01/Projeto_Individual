@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard - BielFit</title>
+    <link rel="stylesheet" href="../css/DashBoard.css">
+</head>
+
+<body class="body">
+    <div class="navBar">
+        <div class="container">
+
+            <div class="divConteudo">
+                <a href="./DashBoard.html" class="a">DashBoard</a>
+            </div>
+            <div class="divLogo">
+                <a id="Logo" href="../home.html">BielFit</a>
+            </div>
+            <div class="divConteudo">
+                <a id="Sorteio" href="../Soretio.html">Sorteio</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="boxTitulo">
+        <div class="tituloDash">
+            <h1>DashBoards</h1>
+        </div>
+    </div>
+
+    <div class="boxTitulo">
+        <div class="titulo">
+            <h1>Gráfico das preferencias de treino dos nossos usuários</h1>
+        </div>
+    </div>
+    <div class="boxDash">
+        <div class="dash">
+            <canvas id="myChart"></canvas>
+
+        </div>
+    </div>
+    <div class="rodaPe">
+        <span>© Copyright - Programador Gabriel Vaz SPT</span>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+
+    let proximaAtualizacao;
+
+    window.onload = obterDadosGrafico();
+
+
+    function obterDadosGrafico(dados) {
+
+
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+        fetch(`/medidas/ultimas/${dados}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta, dados);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function plotarGrafico(resposta) {
+
+        console.log('iniciando plotagem do gráfico...');
+
+        let labels = ["Peito", "Ombro", "Triceps", "Costas", "Biceps", "Perna"];
+
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Votos dos Usuários',
+                data: [],
+                fill: false,
+                borderColor: 'black',
+                backgroundColor: [
+                    'red',
+                    'yellow',
+                    'blue',
+                    'green',
+                    'purple',
+                    'pink'
+                ],
+                tension: 0.1
+            },
+            ]
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.datasets[0].data[0] = (registro.peito);
+            dados.datasets[0].data[1] = (registro.ombro);
+            dados.datasets[0].data[2] = (registro.tricipes);
+            dados.datasets[0].data[3] = (registro.costas);
+            dados.datasets[0].data[4] = (registro.bicipes);
+            dados.datasets[0].data[5] = (registro.perna);
+
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
+
+
+        const config = {
+            type: 'bar',
+            data: dados,
+        };
+
+        let myChart = new Chart(
+            document.getElementById(`myChart`),
+            config
+        );
+
+        setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+    }
+
+    function atualizarGrafico(dados, myChart) {
+
+
+
+        fetch(`/medidas/tempo-real/`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (novoRegistro) {
+
+                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+                    console.log(`Dados atuais do gráfico:`);
+                    console.log(dados);
+
+
+                    if (novoRegistro[0].momento_grafico == dados.labels[dados.labels.length]) {
+                        console.log("---------------------------------------------------------------")
+                        console.log("Como não há dados novos para captura, o gráfico não atualizará.")
+                        console.log("Horário do novo dado capturado:")
+                        console.log(novoRegistro[0].momento_grafico)
+                        console.log("Horário do último dado capturado:")
+                        console.log(dados.labels[dados.labels.length])
+                        console.log("---------------------------------------------------------------")
+                    } else {
+                        // tirando e colocando valores no gráfico
+                        dados.labels.shift(); // apagar o primeiro
+                        dados.labels.push(novoRegistro[0].voto_grafico); // incluir um novo momento
+                        myChart.update();
+                    }
+
+                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+</script>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+    <link rel="stylesheet" href="./css/sorteio.css">
+</head>
+
+<body class="body">
+    <div class="navBar">
+        <div class="container">
+
+            <div class="divConteudo">
+                <a href="./dashboard/DashBoard.html">DashBoard</a>
+            </div>
+            <div class="divLogo">
+                <a id="Logo" href="./home.html">BielFit</a>
+            </div>
+            <div class="divConteudo">
+                <a id="Sorteio" href="./Soretio.html" class="a">Sorteio</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="boxTitulo">
+        <div class="titulo">
+            <h1>Lista de premios que você pode adquirir no sorteio</h1>
+        </div>
+    </div>
+
+
+    <div class="boxPremios">
+        <div class="linhaPremios">
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/whey.png" alt="">
+                </div>
+                <div class="nomePremio">
+                    <span>Whey</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/creatina.jpg" alt="">
+                </div>
+                <div class="nomePremio">
+                    <span>Creatina</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/BCA.png" alt="">
+                </div>
+                <div class="nomePremio">
+                    <span>BCAA</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/pré treino.png" alt="">
+                </div>
+                <div class="nomePremio">
+                    <span>Pré-treino</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxPremios">
+        <div class="linha2Premios">
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/FaixaJoelho.jpg" alt="">
+
+                </div>
+                <div class="nomePremio">
+                    <span>Faixa para Joelho</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/Strap.jpeg" alt="">
+
+                </div>
+                <div class="nomePremio">
+                    <span>Strap</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/Cinta.jpeg" alt="">
+
+                </div>
+                <div class="nomePremio">
+                    <span>Cinta</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/b_coqueteleira-3-compartimentos-com-mixball-growth-supplements.png" alt="">
+
+                </div>
+                <div class="nomePremio">
+                    <span>Coqueteleira</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxPremios">
+        <div class="linha3Premios">
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/Camisa 1.png" alt="">
+
+                </div>
+                <div class="nomePremio">
+                    <span>Regata</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/Preto_1057301.png" alt="">
+
+                </div>
+                <div class="nomePremio">
+                    <span>Regata</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/regata2.png" alt="">
+
+                </div>
+                <div class="nomePremio">
+                    <span>Regata</span>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="imgPremio">
+                    <img src="./Img/regata.png" alt="">
+                </div>
+                <div class="nomePremio">
+                    <span>Regata</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxResultado">
+        <div class="container">
+            <div class="boxBotao">
+                <div class="textoBotao">
+                    <span>Clique no botão para sortaer seu premio</span>
+                </div>
+                <div id="div_contador" class="div_contador">
+                    <div class="contadorMensagem">
+
+                    </div>
+                </div>
+
+                <div class="botao">
+                    <button onclick="sortear()" class="button"></button>
+                </div>
+            </div>
+            <div class="resultado">
+                <div id="div_imagem" class="imgResultado">
+                    <img src="" style="height: 370px; height: 0%;" alt="">
+                </div>
+                <div id="div_frase" class="textoResultado">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxTituloSoreteio">
+        <div class="tituloSorteio">
+            <h1>Agora sorteie varios premios de uma vez </h1>
+        </div>
+    </div>
+    <div class="boxInputSorteio">
+        <input type="number" placeholder="Quantidade de premios para sortear" id="input_qtdAlbuns" class="inputSorteio">
+    </div>
+    <div class="boxBotaoSorteio">
+        <button onclick="sortearAleatorio()">
+            Sortear
+        </button>
+    </div>
+
+    <div class="boxboxSorteio">
+        <div class="boxSorteio">
+            <div class="imgSorteio" id="div_imgSorteio">
+            </div>
+            <div id="div_fraseSorteio" class="fraseSorteio">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<div class="rodaPe">
+    <span>© Copyright - Programador Gabriel Vaz SPT</span>
+</div>
+
+
+</body>
+
+</html>
+<script>
+    var listaPremios = [
+        ' <img src="./Img/whey.png" style="width: 100%; height: 400px;">',
+        '<img src="./Img/creatina.jpg" style="width: 100%; height: 400px;">',
+        '<img src="./Img/BCA.png" style="width: 100%; height: 400px;">',
+        '<img src="./Img/pré treino.png" style="width: 100%; height: 400px;">',
+        '<img src="./Img/FaixaJoelho.jpg" style="width: 100%; height: 400px;">',
+        '<img src="./Img/Strap.jpeg" style="width: 100%; height: 400px;">',
+        '<img src="./Img/b_coqueteleira-3-compartimentos-com-mixball-growth-supplements.png" style="width: 100%; height: 400px;">',
+        '<img src="./Img/Cinta.jpeg" style="width: 100%; height: 400px;">',
+        '<img src="./Img/Camisa 1.png" style="width: 100%; height: 400px;">',
+        '<img src="./Img/Preto_1057301.png" style="width: 100%; height: 400px;">',
+        '<img src="./Img/regata2.png" style="width: 100%; height: 400px;">',
+        '<img src="./Img/regata.png" style="width: 100%; height: 400px;">',
+    ];
+
+    var listaPremiosFor = [
+        '<img src="./Img/whey.png" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/creatina.jpg" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/BCA.png" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/pré treino.png" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/FaixaJoelho.jpg" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/Strap.jpeg" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/b_coqueteleira-3-compartimentos-com-mixball-growth-supplements.png" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/Cinta.jpeg" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/Camisa 1.png" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/Preto_1057301.png" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/regata2.png" style="width: 33%%; height: 20vh;">',
+        '<img src="./Img/regata.png" style="width: 33%%; height: 20vh;">',
+
+    ];
+    var nomePremio = [
+        'Whey',
+        'Creatina',
+        'BCAA',
+        'Pré-treino',
+        'Faixa para Joelho',
+        'Strap',
+        'Coqueteleira',
+        'Cinta',
+        'Regata - Mamãe disse que estou fortinho',
+        'Regata - Eu como até a falha',
+        'Regata - Aluno aplicado',
+        'Regata - Tenho medo do escuro',
+    ];
+
+    function sortear() {
+        div_imagem.innerHTML = ``;
+        div_frase.innerHTML = ``;
+
+        var posicaoSorteada = parseInt(Math.random() * listaPremios.length);
+
+        console.log(posicaoSorteada)
+
+        div_imagem.innerHTML = listaPremios[posicaoSorteada];
+        div_frase.innerHTML = nomePremio[posicaoSorteada];
+    }
+
+    function sortearAleatorio() {
+        div_imgSorteio.innerHTML = ``;
+        div_fraseSorteio.innerHTML = ``;
+
+        var qtdSorteio = Number(input_qtdAlbuns.value);
+
+        for (var contador = 1; contador <= qtdSorteio; contador++) {
+            var posicaoSorteada = parseInt(Math.random() * listaPremios.length);
+
+            if (contador % 5 == 0) {
+                div_imgSorteio.innerHTML += listaPremiosFor[posicaoSorteada];
+                div_imgSorteio.innerHTML += `<br>`;
+            } else {
+                div_imgSorteio.innerHTML += listaPremiosFor[posicaoSorteada];
+            }
+
+            div_fraseSorteio.innerHTML += `
+            Prêmio n°${contador} = ${nomePremio[posicaoSorteada]}<br>
+            `;
+
+        }
+    }
+</script>

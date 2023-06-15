@@ -1,0 +1,74 @@
+body{
+    margin: 0%;
+}
+
+.conteudo #login{
+    text-decoration: underline ;
+    text-decoration-thickness: 2px;
+    color: black;
+    
+}
+
+.bannerLogin{
+    display: flex;
+
+    background-image: url("../Img/banner.login.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: start;
+    align-items: center;
+
+    height: 750px;
+    width: 100%;
+}
+
+.boxLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 5%;
+    /* justify-content: space-around; */
+
+    background-color: white;
+    border-radius: 5px;
+    height: 35%;
+    width: 25%;
+}
+
+.boxLogin .tituloLogin{
+    color: red;
+    margin-bottom: 6%;
+
+}
+
+.boxFormulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    
+}
+
+.botaoLogin{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    width: 100%;
+
+}
+
+.botaoLogin a {
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+}
+
+.botao{
+    background-color: red;
+    border-radius: 12px;
+
+    height: 40px;
+    width: 30%;
+}

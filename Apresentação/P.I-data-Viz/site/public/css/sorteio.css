@@ -1,0 +1,348 @@
+.body{
+    margin: 0%;
+}
+
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 100%;
+}
+
+.navBar .container{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;
+
+    border-bottom: 3px solid red;
+    width: 80%;
+}
+
+.navBar a{
+    text-decoration: none;
+    color: red;
+    
+}
+
+.divConteudo .a{
+    color: black;
+}
+
+.divLogo #Logo{
+    font-size: 32px;
+}
+
+
+.boxTitulo{
+    display: flex;
+    justify-content: center;
+
+
+    height: 70px;
+    width: 100%;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 21px;
+    
+    width: 60%;
+
+    margin-top: 2%;
+}
+
+.boxBox{
+    border: 4px solid red;
+    
+}
+
+.boxPremios{
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    height: 200px;
+    width: 100%;
+
+    margin-top: 3%;
+}
+
+
+.linhaPremios{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    height: 400px;
+    width: 100%;
+}
+
+.linha2Premios{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+
+    height: 400px;
+    width: 100%;
+    
+}
+
+.linha3Premios{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+
+    height: 400px;
+    width: 100%;
+
+}
+
+.premios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 200px;
+    width: 15%;
+
+}
+
+.imgPremio{
+    display: flex;
+    height: 200px;
+    width: 100%;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.imgPremio img{
+    width: 100%;
+}
+
+.boxResultado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 600px;
+    width: 100%;
+
+    margin-top: 3%;
+}
+
+.boxResultado .container{
+    display: flex;
+    align-items: center;
+
+    height: 200px;
+    width: 80%;
+}
+
+.boxResultado .boxBotao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    height: 200px;
+    width: 100%;
+}
+
+.boxResultado .textoBotao{
+    display: flex;
+    justify-content: center;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+
+}
+
+.button{    
+    border-radius: 52px;
+
+    width: 100px;
+    height: 100px;
+
+    margin-top: 4%;
+}
+
+.resultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: red 3px solid;
+    border-radius: 12px;
+    height: 500px;
+    width: 100%;
+}
+.imgResultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-size: 100%;
+    background-size: cover;
+    
+
+
+    height: 470px;
+    width: 70%;
+}
+
+.textoResultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 20px;
+    width: 70%;
+}
+
+
+.div_contador{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contadorMensagem{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.boxTituloSoreteio{
+    display: flex;
+    justify-content: center;
+    
+    height: 40px;
+    width: 100%;
+    
+}
+
+.tituloSorteio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 21px;
+    
+    width: 60%;
+    
+    
+}
+
+.tituloSorteio span{
+    font-size: 32px;
+    
+}
+
+.boxInputSorteio{
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    
+    margin-top: 1%;
+}
+
+.inputSorteio{
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 1rem;
+
+    width: 15%;
+}
+
+.boxBotaoSorteio{
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    
+    margin-top: 1%;
+}
+
+.boxboxSorteio{
+    display: flex;
+    justify-content: center;
+    
+    height: 500px;
+    width: 100%;
+    
+    margin-top: 2%;
+}
+
+.boxSorteio{
+    display: flex;
+    flex-direction: column;
+    
+    /* background-color: aqua; */
+    height: auto;
+    width: 80%;
+}
+
+.imgSorteio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    /* background-color: aquamarine; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    
+}
+
+/* .imgSorteio img{
+    margin-left: 5%;
+} */
+
+.fraseSorteio{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    
+    height: auto;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+
+    border: red 3px solid;
+    border-radius: 12px;
+}
+.rodaPe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+
+    background-color: red;
+    margin-top: 5%;
+}
+
+.rodaPe span {
+    font-size: 16px;
+    color: white;
+}

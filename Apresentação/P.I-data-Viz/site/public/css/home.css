@@ -1,0 +1,428 @@
+.body {
+    background-color: white;
+    margin: 0%;
+}
+
+
+.navBar {
+    display: flex;
+    align-items: center;
+
+    background-color: red;
+    height: 60px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2%;
+    width: 100%;
+}
+
+
+.navBar .icon {
+    align-items: center;
+}
+
+.navBar .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 15%;
+
+}
+
+.navBar .conteudo a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.navBar .icon a {
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+
+}
+
+/* .navBar .iconMenu{
+    background-image: url("../Img/menu_121304.png");
+    height: 100%;
+    width: auto;
+} */
+
+.bannerHome {
+    display: flex;
+
+    background-image: url("../Img/Banner.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+
+    height: 700px;
+    width: 100%;
+}
+
+
+
+.bannerHome .mensagemBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background-color: white;
+
+    border-radius: 5px;
+    color: black;
+
+
+    height: 80px;
+    width: 40%;
+
+}
+
+
+.boxBio {
+
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.boxBio .container {
+    border-radius: 25px;
+    background: red;
+
+}
+
+.bio #titulo {
+    margin-left: 50%;
+}
+
+.bio #span1 {
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.bio #span2 {
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+
+.img1 {
+    background-image: url("../Img/CbumIMG.jpg");
+    /* background-image: url("../Img/marino.jpg"); */
+    background-size: cover;
+    height: 100%;
+    width: 80%;
+}
+
+.img2 {
+    background-color: antiquewhite;
+    background-image: url("../Img/ramonDino.jpg");
+    /* background-image: url("../Img/lulecan.png"); */
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+}
+
+.boxCouple {
+    display: flex;
+    flex-direction: column;
+    
+
+    justify-content: center;
+    align-items: center;
+
+    height: 600px;
+}
+
+.caixaCouple{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: red;
+
+    width: 80%;
+    height: 700px;
+    margin-bottom: 1%;
+
+}
+
+.couple {
+    background-color: antiquewhite;
+    background-image: url("../Img/couple.jpg");
+    background-size: cover;
+    align-items: center;
+
+    width: 80%;
+    height: 500px;
+}
+
+.fraseCouple {
+    margin-top: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+.fraseCouple span{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.tresPilares {
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.pilaresTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: red;
+
+    width: 20%;
+    margin-top: 2%;
+}
+
+.pilaresTituloAcad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: red;
+
+    width: 40%;
+    margin-top: 3%;
+}
+
+.boxTresPilares {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 200px;
+    width: 100%;
+
+}
+
+.conteudoPilar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border: 3px solid black;
+    border-radius: 12px;
+    height: 150px;
+    width: 150px;
+}
+
+.conteudoPilar span {
+    margin-top: 3%;
+}
+
+/* .iconPilar{
+    background-color: black;
+    background-image: url("../Img/");
+    width: 50px;
+    height: 50px;
+} */
+
+.iconPilar1 {
+    background-image: url("../Img/Objetivo.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.iconPilar2 {
+    background-image: url("../Img/Constancia.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.iconPilar3 {
+    background-image: url("../Img/Descanso.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+
+.curiosidadeInput {
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 3%;
+
+
+}
+
+.curiosidadeInput .input {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    width: 40%;
+
+
+}
+
+.curiosidadeInput .input_value{
+    border: none;
+    border-bottom: 2px solid black;
+
+    width: 30%;
+}
+
+
+.curiosidadeBotao {
+    display: flex;
+    margin-top: 2%;
+    justify-content: center;
+
+}
+
+.butao{
+    border-radius: 8px;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.butao a{
+    color: white;
+}
+
+.boxCuriosidade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 200px;
+    width: 100%;
+
+    margin-top: 2%;
+}
+
+.boxTitulo{
+    display: flex;
+    justify-content: center;
+    
+    height: 100px;
+    width: 100%;
+
+    margin-top: 2%;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    
+    background-color: red;
+    width: 40%;
+}
+
+.votacao{
+    display: flex;
+    
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+
+    width: 100%;
+}
+
+.botoesVotacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: red;
+    border-radius: 25px;
+    width: 70%;
+}
+.botoes{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+}
+.boxRegistrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+    width: 100%;
+}
+
+.botaoRegistrar{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;    
+    margin-top: 1%;
+    width: 20%;
+    
+}
+
+.boxInspiracao{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.tituloInspiracao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    
+    background-color: red;
+    width: 30%;
+
+    margin-top: 5%;
+}
+
+.rodaPe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+
+    background-color: red;
+}
+
+.rodaPe span {
+    font-size: 16px;
+    color: white;
+}

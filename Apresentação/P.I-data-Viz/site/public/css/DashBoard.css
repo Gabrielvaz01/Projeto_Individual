@@ -1,0 +1,110 @@
+.body{
+    margin: 0%;
+}
+
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 100%;
+}
+
+.navBar .container{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;
+
+    border-bottom: 3px solid red;
+    width: 80%;
+}
+
+.navBar a{
+    text-decoration: none;
+    color: red;
+    
+}
+
+.divConteudo .a{
+    color: black;
+}
+
+.divLogo #Logo{
+    font-size: 32px;
+}
+
+.boxTitulo{
+    display: flex;
+    justify-content: center;
+
+
+    height: 70px;
+    width: 100%;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 21px;
+    
+    width: 60%;
+
+    margin-top: 1%;
+}
+
+.tituloDash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 21px;
+    
+    width: 20%;
+
+    margin-top: 2%;
+}
+
+.boxDash{
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+
+    height: 477px;
+    width: 100%;
+
+    margin-top: 2%;
+}
+
+.dash{
+    display: flex;
+    border: 2px solid red;
+    border-radius: 1rem;
+    justify-content: center;
+
+    width: 80vw; 
+}
+
+.dash canvas {
+    width: 60%;
+    height: 100%;
+}
+
+.rodaPe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+
+    background-color: red;
+
+    margin-top: 2%;
+}
+
+.rodaPe span {
+    font-size: 16px;
+    color: white;
+}

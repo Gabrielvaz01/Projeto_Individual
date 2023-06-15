@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./css/home.css">
+
+</head>
+
+<body class="body">
+
+    <nav class="navBar">
+        <div class="container">
+            <div class="icon">
+                <a href="Home.html">BIELFIT</a>
+            </div>
+
+            <div class="conteudo">
+                <div class="icon2">
+                    <span> <a href="./dashboard/DashBoard.html"> DashBoard</a> </span>
+                </div>
+                <div class="icon2">
+                    <a href="">|</a>
+                </div>
+                <div class="icon2">
+                    <span> <a href="Login.html"> Login </a> </span>
+                </div>
+                <div class="icon2">
+                    <a href="">|</a>
+                </div>
+                <div class="icon2">
+                    <span> <a href="Cadastro.html"> Cadastrar</a> </span>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="bannerHome">
+
+        <div class="mensagemBanner">
+            <span>
+                Mudar nãe é facíl mas quando você nota os resultados nada te faz parar
+            </span>
+        </div>
+
+    </div>
+
+    <div class="tresPilares">
+        <div class="pilaresTituloAcad">
+            <h1>3 PILARES DA ACADEMIA</h1>
+        </div>
+    </div>
+
+    <div class="boxTresPilares">
+
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar1">
+
+                </div>
+                <span> OBJETIVO</span>
+            </div>
+
+        </div>
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar2">
+
+                </div>
+                <span> CONSTÂNCIA</span>
+
+            </div>
+        </div>
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar3">
+
+                </div>
+                <span> DESCANSO</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tresPilares">
+        <div class="pilaresTitulo">
+            <h1>Curiosidade</h1>
+        </div>
+    </div>
+
+    <div class="curiosidadeInput">
+        <div class="input">
+            <input type="text" placeholder="Insira seu peso" id="input_peso" class="input_value">
+            <input type="text" placeholder="Insira sua altura" id="input_altura" class="input_value">
+        </div>
+    </div>
+
+    <div class="curiosidadeBotao">
+        <div class="botao">
+            <button onclick="calcular()" class="butao">
+                <a> Clique aqui para calcular</a>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="boxCuriosidade">
+        <div class="conteudoPilar">
+            <div class="iconPilar">
+
+            </div>
+            <span> IMC</span>
+            <div id="div_IMC"></div>
+        </div>
+    </div>
+
+    <div class="boxTresPilares">
+
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar">
+
+                </div>
+                <span> ÁGUA</span>
+                <div id="div_agua"></div>
+            </div>
+
+        </div>
+
+        <div class="boxPilar">
+            <div class="conteudoPilar">
+                <div class="iconPilar">
+
+                </div>
+                <span> CREATINA</span>
+
+                <div id="div_creatina"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="boxTitulo">
+        <div class="titulo">
+            <h1>Vote no seu treino favorito</h1>
+        </div>
+    </div>
+
+    <div class="votacao">
+        <div class="botoesVotacao">
+            <div class="botoes">
+                Peito
+                <input type="checkbox" name="" id="input_peito">
+            </div>
+            <div class="botoes">
+
+                Ombro
+                <input type="checkbox" name="" id="input_ombro">
+
+            </div>
+            <div class="botoes">
+
+                Tricipes
+                <input type="checkbox" name="" id="input_tricipes">
+
+            </div>
+            <div class="botoes">
+
+                Costas
+                <input type="checkbox" name="" id="input_costas">
+
+            </div>
+            <div class="botoes">
+
+                Bicipes
+                <input type="checkbox" name="" id="input_bicipes">
+
+            </div>
+            <div class="botoes">
+
+                Perna
+                <input type="checkbox" name="" id="input_perna">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="boxRegistrar">
+
+        <div class="botaoRegistrar">
+            <button onclick="registrar()">
+                Registrar
+            </button>
+        </div>
+    </div>
+    <div class="boxInspiracao">
+        <div class="tituloInspiracao">
+            <h1>
+                Minhas Inspirações
+            </h1>
+        </div>
+    </div>
+    <div class="boxBio">
+        <div class="container">
+            <div class="bio">
+                <h1 id="titulo">CBUM</h1>
+                <span id="span1">
+                    <a>
+                        Christopher Adam Bumstead "CBUM", nascido no 2 de fevereiro de 1995, Ottawa, Canadá.
+
+                        Durante toda a sua vida, esteve envolvido em diversos esportes. No ensino médio, praticou
+                        esgrima,
+                        futebol, baseball, basquete e hockey.</br>
+
+                        Com apenas 14 anos, entrou para o mundo do levantamento de peso. Alguns anos depois, agora com o
+                        seu
+                        cunhado bodybuilder Iain Valliere como coach, CBUM começou a treinar para competir.</br>
+
+                        A Doença de Berger é uma doença renal incurável que resulta em uma inflamação que pode
+                        dificultar a
+                        capacidade de filtração renal. Os sintomas são presença de sangue na urina, pressão alta e edema
+                        nas
+                        pernas.</br>
+
+                        O tratamento da doença foi fisicamente e mentalmente exaustivo. Mas, com o passar do tempo,
+                        Chris
+                        conseguiu conciliar essa parte da vida com sua carreira profissional.</br>
+
+                        No entanto, isso não o abalou. CBUM continuou treinando e já estava pronto para competir quando
+                        chegou o Mr. Olympia 2018. Mesmo com todos esses problemas, chegou ao 2º lugar.</br>
+
+                        Em 2019, CBUM iniciou o que seriam 4 anos vencendo um Mr. Olympia atrás do outro. A cada ano,
+                        voltava cada vez maior e melhor. Arnold Schwarzenegger afirmou que atualmente Chris Bumstead é
+                        de
+                        longe o mais popular entre os espectadores e amantes do esporte
+                    </a>
+                </span>
+            </div>
+            <div class="img1">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="boxBio">
+        <div class="container">
+            <div class="img2">
+
+            </div>
+            <div class="bio">
+                <h1 id="titulo">Dino</h1>
+
+                <span id="span2">
+                    Ramon Rocha Queiroz "Dino", nascido no dia 9 de fevereiro de 1995, Acre, Brasil. É um fisiculturista
+                    profissional brasileiro, e o principal atleta "Classic" do Brasil. Desde cedo, ele demonstrou
+                    interesse e talento para esportes, mas foi no fisiculturismo que encontrou sua verdadeira paixão.</br>
+
+                    Com determinação e disciplina, Ramon começou a competir em nível amador, participando de campeonatos
+                    regionais e ganhando reconhecimento pela sua impressionante musculatura e simetria corporal. Seus
+                    esforços foram recompensados quando ele conquistou o título de campeão estadual no seu primeiro ano
+                    de competição.</br>
+
+                    Em busca de maiores desafios, Ramon decidiu se dedicar integralmente ao fisiculturismo e começou a
+                    competir em nível nacional. Sua dedicação aos treinos e sua alimentação rigorosa logo renderam
+                    resultados impressionantes. Ele ganhou várias competições importantes, incluindo o campeonato
+                    brasileiro de fisiculturismo.</br>
+
+                    Algumas competições Ramon Dino:</br>
+                    2021: campeão do Expo Super Show, vice-campeão do Europa Pro, quinto do Olympia.</br>
+                    2022: vice-campeão do Olympia e Arnold Classic Ohio.</br>
+                    2023: campeão do Arnold Classic Ohio. </br>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="index.html"></a>
+
+    <div class="boxCouple">
+
+        <div class="caixaCouple">
+
+            <div class="couple">
+
+            </div>
+
+            <div class="fraseCouple">
+                <span>CBUM vs Ramon Dino MR.Olympia 2022</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="rodaPe">
+        <span>© Copyright - Programador Gabriel Vaz SPT</span>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var peso = Number(input_peso.value);
+        var altura = Number(input_altura.value);
+
+        var IMC = peso / ((altura / 100) * (altura / 100))
+        var qtdAgua = peso * 35
+        var creatina = peso * (7 / 100)
+
+        div_IMC.innerHTML = `${IMC.toFixed(2)} <br> <br>`
+
+        div_agua.innerHTML = `${qtdAgua / 1000} Litros por dia`
+
+        div_creatina.innerHTML = `${creatina.toFixed(1)}`
+
+        if (IMC >= 40) {
+            div_IMC.innerHTML += `
+            Você está com obesidade de 3°
+            `
+
+        } else if (IMC < 40 && IMC >= 35) {
+            div_IMC.innerHTML += `
+            Você está com obesidade de 2°
+            `
+
+        } else if (IMC < 35 && IMC >= 30) {
+            div_IMC.innerHTML += `
+            Você está com obesidade de 1°
+            `
+
+        } else if (IMC < 30 && IMC >= 25) {
+            div_IMC.innerHTML += `
+            Você está  com sobrepeso
+            `
+
+        } else if (IMC < 25 && IMC >= 18.6) {
+            div_IMC.innerHTML += `
+            Você está normal
+            `
+
+        } else {
+            div_IMC.innerHTML += `
+            Você está abaixo do normal
+            `
+        }
+    }
+
+    var Totalpeito = 0;
+    var Totalombro = 0;
+    var Totaltricipes = 0;
+    var Totalcostas = 0;
+    var Totalbicipes = 0;
+    var Totalperna = 0;
+
+        function registrar() {
+          
+            if (input_peito.checked == true) {
+                input_peito.checked = false;
+
+                Totalpeito++;
+            }
+            if (input_ombro.checked == true) {
+                input_ombro.checked = false;
+
+                Totalombro++;
+            }
+             if (input_tricipes.checked == true) {
+                input_tricipes.checked = false;
+
+                Totaltricipes++;
+            }
+             if (input_costas.checked == true) {
+                input_costas.checked = false;
+
+                Totalcostas++;
+            }
+             if (input_bicipes.checked == true) {
+                input_bicipes.checked = false;
+
+                Totalbicipes++;
+            }
+             if (input_perna.checked == true) {
+                input_perna.checked = false;
+
+                Totalperna++;
+            }
+
+
+
+            cadastrarTotal()    
+        }
+            
+            
+            
+        function cadastrarTotal() {
+
+            var TotalpeitoVar = Number(Totalpeito);
+            var TotalombroVar = Number(Totalombro);
+            var TotaltricipesVar = Number(Totaltricipes);
+            var TotalcostasVar = Number(Totalcostas);
+            var TotalbicipesVar = Number(Totalbicipes);
+            var TotalpernaVar = Number(Totalperna);
+            var fkUsuarioVar = Number(sessionStorage.getItem('ID_USUARIO'))
+
+            fetch("/usuarios/cadastrarTotal", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+
+                    TotalpeitoServer : TotalpeitoVar, 
+                    TotalombroServer : TotalombroVar,   
+                    TotaltricipesServer : TotaltricipesVar,
+                    TotalcostasServer : TotalcostasVar,  
+                    TotalbicipesServer : TotalbicipesVar, 
+                    TotalpernaServer : TotalpernaVar, 
+                    fkUsuarioServer : fkUsuarioVar,
+
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                   
+                    alert("Voto registrado com sucesso!!!")
+
+
+                } else {
+                    alert("Houve um erro ao tentar realizar seu voto")
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        }
+       
+
+
+
+    
+    
+</script>
