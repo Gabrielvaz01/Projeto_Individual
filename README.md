@@ -1,2 +1,2 @@
 # Projeto_Individual
-BielFit - site autoral
+BielFit - site autoral do Gabriel
